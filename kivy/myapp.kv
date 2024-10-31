@@ -1,0 +1,66 @@
+ScreenManager:
+    id:color
+    Screen:
+        name:'Main'
+        MDBoxLayout:
+            padding:50
+            spacing:20
+            size_hint_y:.5
+            Button:
+                background_color:1,0,0,1
+                text:'Red'
+                on_release:color.current = 'red'
+                height:50
+            Button:
+                background_color: 0,1,0,1
+                text:'Green'
+                on_release:color.current = 'green'
+                height:50
+            Button:
+                background_color: 0,0,1,1
+                text:'Blue'
+                on_release:color.current = 'blue'
+                height:50
+        MDLabel:
+            size_font:50
+            text:'Click button'
+            halign:'center'
+    Screen:
+        name:'red'
+        MDBoxLayout:
+            orientation:'vertical'
+            md_bg_color:1,0,0,1
+            Button:
+                size_hint:.2,.2
+                text:'Back'
+                on_release:color.current = 'Main'
+            MDLabel:
+                text:'Hi, im red'
+                halign:'center'
+                size_font:50
+    Screen:
+        name:'green'
+        MDBoxLayout:
+            orientation:'vertical'
+            md_bg_color:0,1,0,1
+            Button:
+                size_hint:.2,.2
+                text:'Back'
+                on_release:color.current = 'Main'
+            MDLabel:
+                text:'Hi, im green'
+                halign:'center'
+                size_font:50
+    Screen:
+        name:'blue'
+        MDBoxLayout:
+            orientation:'vertical'
+            md_bg_color:0,0,1,1
+            Button:
+                size_hint:.2,.2
+                text:'Back'
+                on_release:color.current = 'Main'
+            MDLabel:
+                text:'Hi, im blue'
+                halign:'center'
+                size_font:50
